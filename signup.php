@@ -1,15 +1,15 @@
 
 <?php  
- $name =  "SIR JP"; 
- $age = 25; 
- $gender = "female"; 
- $isMale=""; 
- $isFemale="";
+//  $name =  "SIR JP"; 
+//  $age = 25; 
+//  $gender = "female"; 
+//  $isMale=""; 
+//  $isFemale="";
 
- if($gender=="male") {
-    $isMale = "selected";
- } else
- { $isFemale = "selected"; }
+//  if($gender=="male") {
+//     $isMale = "selected";
+//  } else
+//  { $isFemale = "selected"; }
 
 ?> 
 
@@ -28,17 +28,25 @@
 </h1>
 
  Name
-<input type="text" value="<?php echo $name; ?>" > <br><br>
+<input type="text"  > <br><br>
  
 Age
-<input type="number" value="<?php echo $age; ?>" > <br><br>
+<input type="number"   > <br><br>
 
 Gender
 <select>
     <option></option>
-    <option value="male" <?php echo $isMale; ?>>Male</option>
-    <option value="female" <?php echo $isFemale; ?>>Female</option>
+    <option value="male"  >Male</option>
+    <option value="female"  >Female</option>
 </select>
+
+
+<br>
+<br> 
+
+<a href="#">Submit</a>
+
+<a href="index.php">Cancel</a>
 
 </body>
 </html>
