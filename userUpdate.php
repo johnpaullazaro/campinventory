@@ -1,4 +1,21 @@
 
+<?php 
+    include 'dbconnect.php';   
+    session_start();
+    $sql = "SELECT * FROM user where userid=".$_GET["uid"];  
+    $result = $conn->query($sql); 
+
+    $name = "";
+    $age = 0;
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          $name=  $row["name"];
+          $age = $row["age"];
+        }
+    }  
+    $conn->close(); 
+?>
 
 
 
@@ -16,13 +33,16 @@
 </h1>
 
 
-<form method="POST" action="signupAction.php">
+<form method="POST" action="userUpdateAction.php?uid=<?php echo $_GET["uid"] ?>">
  
         Name
-        <input type="text" name="txtname"  > <br><br>
+        <input type="text" name="txtname" 
+        value="<?php echo  $name;?>" >
+         <br><br>
         
         Age
-        <input type="number" name="txtage" > <br><br>
+        <input type="number" name="txtage" 
+        value="<?php echo  $age;?>"> <br><br>
 
         Gender
         <select name="txtgender">
@@ -45,7 +65,7 @@
 
         <input type="submit" value="Submit" />
 
-        <a href="index.php">Cancel</a>
+        <a href="users.php">Cancel</a>
 
 </form>
 

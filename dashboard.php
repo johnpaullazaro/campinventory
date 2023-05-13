@@ -7,24 +7,16 @@
 </head>
 <body>
     <h1>Dashboard</h1>
-
-   
-    <?php
-        session_start();
-        if(isset($_SESSION["userid"])) 
-        {
-           // echo $_SESSION["userid"];
-            echo $_SESSION["userfullname"];
-
-            if($_SESSION["userphoto"]!="") {
-                echo "<img style='border-radius:50%;height:200px;width:auto;' src='".$_SESSION["userphoto"]."' />";
-     
-            }
-          }
-    ?>
-
+    <a href="Products.php">Products</a>
+    <a href="Users.php">Users</a> 
+    <a href="Category.php">Category</a> 
+    <a href="Category.php">Category</a> 
     <br>
-    <a href="logoutAction.php">Logout</a>
+    
+    
+ 
 
+    <?php include 'avatarlogout.php' ?>
+  
 </body>
 </html>

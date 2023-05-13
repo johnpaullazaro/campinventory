@@ -19,7 +19,7 @@
 
         <input type="text" value="" id="txtusername" name="txtusername" placeholder="username" />
 
-        <input type="text" value="" id="txtpassword" name="txtpassword" placeholder="password"/>
+        <input type="password" value="" id="txtpassword" name="txtpassword" placeholder="password"/>
 
         <input type="submit">
 
